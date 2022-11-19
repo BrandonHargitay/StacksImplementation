@@ -21,6 +21,7 @@ public:
     //void printLinkedList();
     template <class S>
     friend std::ostream& operator <<(std::ostream& outs, const LinkedList<S> &list);
+    bool isEmpty();
 private:
     Node<T> *head;
     Node<T> *tail;
@@ -28,7 +29,7 @@ private:
     Node<T> *getPrev(T data);
     Node<T> *search(T data);
     void addFirstNode(T data);
-    bool isEmpty();
+
 };
 
 #include "LinkedList.cpp"
